@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = ViewData["Accion"].ToString();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 id="Titulo">@ViewData["Accion"].ToString()</h1>
+<h1 id="IdCliente" style="visibility:hidden;">@ViewData["Id"].ToString()</h1>
+<h4>Trabajando con JS</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+            <div class="form-group">
+                <label id="lblNombres" class="control-label">Nombres</label>
+                <input id="Nombres" class="form-control" />
+                <span id="ValidateNombres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="lblEmail" class="control-label">Email</label>
+                <input id="Email" class="form-control" />
+                <span id="ValidateEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="lblTelefono" class="control-label">Telefono</label>
+                <input id="Telefono" class="form-control" />
+                <span id="ValidateTelefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="lblDireccion" class="control-label">Direccion</label>
+                <input id="Direccion" class="form-control" />
+                <span id="ValidateDireccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="lblCedula_RUC" class="control-label">Cedula/RUC</label>
+                <input id="Cedula_RUC" class="form-control" />
+                <span id="ValidateCedula_RUC" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" id="isDelete" style="width:30px"/> Se puede Eliminar ?
+                </label>
+            </div>
+            <div class="form-group">
+            <input type="submit" value="Aceptar" class="btn btn-primary" onclick="RealizaAccion()" />
+            </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListaClientesJS">Back to List</a>
+</div>
+
+

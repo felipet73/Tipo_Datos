@@ -1,0 +1,27 @@
+﻿@* @model IEnumerable<Tipo_Datos.Models.Entidades.ClientesModel> *@
+@{
+    ViewData["Title"] = "Ventas - Lista de Clientes";
+    //crear clientes el fondo es azul
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Clientes Get desde API Usando JS</h1>
+<p>
+    <a asp-action="AccionClienteJS" class="btn btn-primary">Crear Cliente</a>
+</p>
+
+<table class="table table-responsive table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Nombre Cliente</th>
+            <th>RUC</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody id="DetalleClientes">        
+    </tbody>
+</table>
+
