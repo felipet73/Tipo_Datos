@@ -208,3 +208,48 @@ var RealizaAccion = () => {
             break;
     }
 }
+
+//Validaciones de formulario
+$(document).ready(function () {
+    if (window.location.href.toLocaleLowerCase().includes('accionclientejs')) {
+        $('#Nombres').on('input', function () {
+            if ($(this).val() === '') {
+                $('#ValidateNombres').text('Nombre no valido');
+            } else {
+                $('#ValidateNombres').text('');
+            }
+        });
+
+        $('#Cedula_RUC').on('input', function () {
+            if ($(this).val() === '') {
+                $('#ValidateCedula_RUC').text('Cedula/RUC no valido');
+            } else {
+                $('#ValidateCedula_RUC').text('');
+            }
+        });
+
+        $('#Telefono').on('input', function () {
+            if ($(this).val() === '') {
+                $('#ValidateTelefono').text('Telefono no valido');
+            } else {
+                $('#ValidateTelefono').text('');
+            }
+        });
+
+        $('#Email').on('input', function () {
+            if ($(this).val() === '') {
+                $('#ValidateEmail').text('Email no valido');
+            } else {
+                $('#ValidateEmail').text('');
+            }
+        });
+
+        $('#Direccion').on('input', function () {
+            if ($(this).val() === '') {
+                $('#ValidateDireccion').text('Direccion no valida');
+            } else {
+                $('#ValidateDireccion').text('');
+            }
+        });
+    }
+});
